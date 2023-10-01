@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Iconscout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Online Class</title>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="https://w7.pngwing.com/pngs/311/115/png-transparent-computer-icons-apprendimento-online-course-educational-technology-learning-learning-miscellaneous-blue-rectangle.png" alt="">
+            </div>
+            <span class="logo_name">OnlineClass</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a routerLink="/dashboard">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/attendance">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Attendance</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/assignment">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Assignment</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="dashboard/grade">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">Grade</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="dashboard/note">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">Note</span>
+                    </a>
+                </li>
+                
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a routerLink="/dashboard/login">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <img routerLink="/dashboard/userprofile" src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="">
+        </div>
+
+        <div class="dash-content" id="dashboard-content">
+          
+            <router-outlet></router-outlet>
+        </div>
+      
+    </section>
+</body>
+</html>

@@ -1,0 +1,333 @@
+{
+  "attendance": [
+    {
+      "id": "1",
+      "date": "2023-09-28",
+      "batch": "A",
+      "students": [
+        {
+          "id": "1",
+          "name": "maryam albalushi",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_john_doe.pdf"
+        },
+        {
+          "id": "2",
+          "name": "Jane Smith",
+          "status": "absent",
+          "leaveReason": "Family emergency",
+          "file": ""
+        },
+        {
+          "id": "3",
+          "name": "Sam Johnson",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_sam_johnson.pdf"
+        },
+        {
+          "id": "4",
+          "name": "Emily Davis",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_emily_davis.pdf"
+        },
+        {
+          "id": "5",
+          "name": "Michael Lee",
+          "status": "absent",
+          "leaveReason": "Doctor's appointment",
+          "file": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2023-09-28",
+      "batch": "B",
+      "students": [
+        {
+          "id": "6",
+          "name": "Alex Johnson",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_alex_johnson.pdf"
+        },
+        {
+          "id": "7",
+          "name": "Emma Davis",
+          "status": "absent",
+          "leaveReason": "Family vacation",
+          "file": ""
+        },
+        {
+          "id": "8",
+          "name": "Olivia Smith",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_olivia_smith.pdf"
+        },
+        {
+          "id": "9",
+          "name": "James Brown",
+          "status": "absent",
+          "leaveReason": "Sick",
+          "file": ""
+        },
+        {
+          "id": "10",
+          "name": "Sophia Lee",
+          "status": "present",
+          "leaveReason": "",
+          "file": "attendance_certificate_sophia_lee.pdf"
+        }
+      ]
+    },
+    [
+      {
+        "date": "2023-09-30",
+        "batch": "A",
+        "students": [
+          {
+            "id": 1,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 2,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 3,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 4,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 5,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "date": "2023-09-30",
+        "batch": "B",
+        "students": [
+          {
+            "id": 1,
+            "status": true,
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 2,
+            "status": "",
+            "leaveReason": "sick",
+            "certificate": {}
+          },
+          {
+            "id": 3,
+            "status": true,
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 4,
+            "status": true,
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 5,
+            "status": "",
+            "leaveReason": "no resons",
+            "certificate": ""
+          }
+        ]
+      }
+    ],
+    {
+      "id": 5
+    },
+    [
+      {
+        "date": "2023-09-30",
+        "batch": "A",
+        "students": [
+          {
+            "id": 1,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 2,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 3,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 4,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 5,
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "date": "2023-09-30",
+        "batch": "A",
+        "students": [
+          {
+            "id": 1,
+            "name": "maryam albalushi",
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 2,
+            "name": "sara alryami",
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 3,
+            "name": "reem alhooti",
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 4,
+            "name": "huda albosafi",
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          },
+          {
+            "id": 5,
+            "name": "marya mohammed",
+            "status": "present",
+            "leaveReason": "",
+            "certificate": ""
+          }
+        ]
+      }
+    ]
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "maryam albalushi",
+      "batch": "A"
+    },
+    {
+      "id": 2,
+      "name": "sara alryami",
+      "batch": "A"
+    },
+    {
+      "id": 3,
+      "name": "reem alhooti",
+      "batch": "A"
+    },
+    {
+      "id": 4,
+      "name": "huda albosafi",
+      "batch": "A"
+    },
+    {
+      "id": 5,
+      "name": "marya mohammed",
+      "batch": "A"
+    },
+    {
+      "id": 1,
+      "name": "sara alsabqi",
+      "batch": "B"
+    },
+    {
+      "id": 2,
+      "name": "waad alsreeqi",
+      "batch": "B"
+    },
+    {
+      "id": 3,
+      "name": "mido al meedo",
+      "batch": "B"
+    },
+    {
+      "id": 4,
+      "name": "abeer al balushi",
+      "batch": "B"
+    },
+    {
+      "id": 5,
+      "name": "maryam mohammed",
+      "batch": "B"
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Assignment 1",
+      "deadline": "2023-10-10",
+      "file": "assignment1.pdf"
+    },
+    {
+      "id": 2,
+      "name": "Assignment 2",
+      "deadline": "2023-10-15",
+      "file": "assignment2.docx"
+    },
+    {
+      "id": 3,
+      "name": "Assignment 3",
+      "deadline": "2023-10-20",
+      "file": "assignment3.pdf"
+    }
+  ],
+  "submissions": [
+    {
+      "id": 1,
+      "file": "john_assignment1.pdf"
+    },
+    {
+      "id": 2,
+      "file": "jane_assignment1.docx"
+    },
+    {
+      "id": 3
+    }
+  ]
+}

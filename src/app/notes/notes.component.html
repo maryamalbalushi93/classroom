@@ -1,0 +1,24 @@
+<!-- Add a section for notes with a bright yellow background -->
+<section class="notes">
+    <h2 style="text-align: center;">My Notes</h2>
+    <div class="note-container">
+        <!-- Use *ngFor to iterate over notes and display them in cards -->
+        <div class="note-card" *ngFor="let note of notes" [ngClass]="{'new-note': note.isNew}">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.content }}</p>
+            <button (click)="deleteNote(note.id)">Delete Note</button>
+        </div>
+    </div>
+    <div class="add-note">
+        <h3>Add New Note</h3>
+        <div class="mb-3">
+            <label for="noteTitle" class="form-label">Title</label>
+            <input type="text" [(ngModel)]="newNote.title" class="form-control" id="noteTitle" required>
+        </div>
+        <div class="mb-3">
+            <label for="noteContent" class="form-label">Content</label>
+            <textarea class="form-control" [(ngModel)]="newNote.content" id="noteContent" rows="3" required></textarea>
+        </div>
+        <button (click)="addNote()">Add Note</button>
+    </div>
+</section>

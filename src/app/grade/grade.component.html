@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Iconscout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style>
+        /* Color Theme */
+        .color-primary-0 { color: #343C6F }  /* Main Primary color */
+        .color-primary-1 { color: #787EA5 }
+        .color-primary-2 { color: #4F5787 }
+        .color-primary-3 { color: #1F2759 }
+        .color-primary-4 { color: #0C133C }
+
+        /* Additional Styles */
+        .rgba-primary-0 { background-color: rgba(52, 60, 111, 1); }
+        .rgba-primary-1 { background-color: rgba(120, 126, 165, 1); }
+        .rgba-primary-2 { background-color: rgba(79, 87, 135, 1); }
+        .rgba-primary-3 { background-color: rgba(31, 39, 89, 1); }
+        .rgba-primary-4 { background-color: rgba(12, 19, 60, 1); }
+
+        /* Additional Custom Styles */
+        .pass { color: green; }
+        .fail { color: red; }
+    </style>
+
+    <title>Online Class</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+          <div>
+            <label for="batchSelector">Select Batch:</label>
+            <select id="batchSelector" class="form-control" [(ngModel)]="selectedBatch" (change)="loadStudents(selectedBatch)">
+              <option value="batch1">Batch 1</option>
+              <option value="batch2">Batch 2</option>
+            </select>
+          </div>
+      
+          <table class="table table-striped">
+            <!-- Table headers -->
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Task 1</th>
+                <th>Task 2</th>
+                <th>Total Grade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td><input type="number" [(ngModel)]="student.task1"></td>
+                <td><input type="number" [(ngModel)]="student.task2"></td>
+                <td>{{ calculateTotalGrade(student.task1, student.task2) }}</td>
+                <td [ngClass]="{ 'pass': calculateTotalGrade(student.task1, student.task2) > 56, 'fail': calculateTotalGrade(student.task1, student.task2) <= 56 }">
+                  {{ getPassOrFail(calculateTotalGrade(student.task1, student.task2)) }}
+                </td>
+                <td><button class="btn btn-primary" (click)="updateGrade(student.id, student.task1, student.task2)">Update Grade</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+      </body>
+</html>
+   

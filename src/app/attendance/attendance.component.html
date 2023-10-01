@@ -1,0 +1,77 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<div class="container mt-5 table-container">
+    <form [formGroup]="attendanceForm" (ngSubmit)="saveAttendance()">
+        <div class="row mb-3">
+            <div class="col">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" class="form-control" id="date" formControlName="date" required>
+                <div class="invalid-feedback">
+                    Please provide a valid date.
+                </div>
+            </div>
+            <div class="col">
+                <label for="batch" class="form-label">Batch:</label>
+                <select class="form-select" id="batch" formControlName="batch" (change)="onBatchChange()" required>
+                   
+                                      <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+                <div class="invalid-feedback">
+                    Batch is required.
+                </div>
+            </div>
+        </div>
+<!-- Add this checkbox at the top of the table -->
+<!-- Add this checkbox at the top of the table -->
+<input type="checkbox" class="form-check-input" id="selectAll" #selectAllCheckbox (change)="selectAllStudents($event)">
+<label class="form-check-label" for="selectAll">Select All students</label>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Leave Reason</th>
+            <th>Sick Leave Certificate</th>
+        </tr>
+    </thead>
+    <tbody formArrayName="students">
+        <tr *ngFor="let student of students.controls; let i = index"
+         [formGroupName]="i">
+            <td>
+                <label>{{ getStudentId(i) }}</label>
+            </td>
+            <td style="min-width: 250px;">
+                <label class="single-line">{{ getStudentName(i) }}</label>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="presentCheck{{i}}" formControlName="status"
+                        [value]="'present'">
+                    <label class="form-check-label" for="presentCheck{{i}}">Present</label>
+                </div>
+            </td>
+            <td style="min-width: 300px;">
+                <input type="text" class="form-control" formControlName="leaveReason">
+            </td>
+            <td style="min-width: 300px;">
+                <input type="file" class="form-control" (change)="onFileChange($event, i)">
+            </td>
+            <td>
+                <div class="status-icon"
+                    *ngIf="students.controls[i].get('status')?.value === 'present'">&#10004;</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+        <button type="submit" class="btn btn-primary">Save Attendance</button>
+    </form>
+</div>

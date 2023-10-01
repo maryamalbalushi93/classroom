@@ -1,0 +1,110 @@
+/* Add your custom styles here */
+
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  .wider-col {
+    width: 200px;
+}
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .status-icon {
+    color: green;
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+  
+  label {
+    font-weight: bold;
+    display: block;
+  }
+  .single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px; /* Adjust as needed */
+}
+  /* Center the table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the table */
+.table {
+    width: 80%; /* Adjust as needed */
+    border-collapse: collapse;
+}
+
+/* Style table headers */
+.table th {
+    background-color: #f8f9fa; /* Light gray background */
+    text-align: center;
+    padding: 8px;
+}
+
+/* Style table rows */
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+/* Add some space between table cells */
+.table td, .table th {
+    padding: 8px;
+}
+
+/* Style the checkbox label */
+.form-check-label {
+    font-weight: normal;
+}
+
+/* Center the Save button */
+.btn-primary {
+    display: block;
+    margin: auto;
+}
+
+  .select-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .date-picker {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-label input {
+    margin: 0 10px 0 0;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0E4BF1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0b3cc1;
+  }
+  
